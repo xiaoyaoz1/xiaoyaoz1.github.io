@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="随笔记">
+    <meta name="keyword" content="">
+    <meta name="theme-color" content="#600090">
+    <meta name="msapplication-navbutton-color" content="#600090">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#600090">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="alternate" type="application/atom+xml" title="随笔记" href="/atom.xml">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
+    <title>
+        
+        hexo常用命令笔记｜Ben&#39;s blog
+        
+    </title>
+
+    <link rel="canonical" href="http://haojen.github.io/2018/11/17/07/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/blog-style.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
+</head>
+
+<style>
+
+    header.intro-header {
+        background-image: url('')
+    }
+</style>
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="" class="animated fadeIn">
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top " id="nav-top" data-ispost = "true" data-istags="false
+" data-ishome = "false" >
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand animated pulse" href="/">
+                <span class="brand-logo">
+                    随笔记
+                </span>
+                's Blog
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <!-- /.navbar-collapse -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+					
+                    
+                        
+							
+                        <li>
+                            <a href="/Tags/">Tags</a>
+                        </li>
+							
+						
+                    
+					
+					
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+//    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+<!-- Main Content -->
+
+<!--only post-->
+
+
+<img class="wechat-title-img"
+     src="">
+
+
+<style>
+    
+    header.intro-header {
+        background-image: url('')
+    }
+
+    
+</style>
+
+<header class="intro-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
+                <div class="post-heading">
+                    <h1>hexo常用命令笔记</h1>
+                    
+                    <span class="meta">
+                         作者 霄遥子
+                        <span>
+                          日期 2018-11-17
+                         </span>
+                    </span>
+                    <div class="tags text-center">
+                        
+                        <a class="tag" href="/tags/#教程"
+                           title="教程">教程</a>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="post-title-haojen">
+        <span>
+            hexo常用命令笔记
+        </span>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <!-- Post Container -->
+            <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
+                <div class="htmledit_views"><br><br><div class="article fmt article__content"><br><p><a href="https://github.com/jaywcjlove/hexoThemeKacper" rel="nofollow" target="_blank">hexo 皮肤Github</a><br><a href="http://jslite.io" rel="nofollow" target="_blank">hexo 皮肤预览</a></p><br><h2 id="articleHeader0"><a name="t0"></a>hexo</h2><br><pre onclick="hljs.copyCode(event)"><code class="bash hljs"><ol class="hljs-ln"><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="1"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">npm install hexo -g <span class="hljs-comment"><span class="hljs-comment">#安装  </span></span></div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="2"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">npm update hexo -g <span class="hljs-comment"><span class="hljs-comment">#升级  </span></span></div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="3"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">hexo init <span class="hljs-comment"><span class="hljs-comment">#初始化</span></span></div></div></li></ol></code><div class="hljs-button" data-title="复制"></div></pre><br><h2 id="articleHeader1"><a name="t1"></a>简写</h2><br><p><code>hexo n “我的博客”</code> == <code>hexo new “我的博客”</code> #新建文章<br><code>hexo p</code> == <code>hexo publish</code><br><code>hexo g</code> == <code>hexo generate</code>#生成<br><code>hexo s</code> == <code>hexo server</code> #启动服务预览<br><code>hexo d</code> == <code>hexo deploy</code>#部署</p><br><h2 id="articleHeader2"><a name="t2"></a>服务器</h2><br><p><code>hexo server</code> #Hexo 会监视文件变动并自动更新，您无须重启服务器。<br><code>hexo server -s</code> #静态模式<br><code>hexo server -p 5000</code> #更改端口<br><code>hexo server -i 192.168.1.1</code> #自定义 IP</p><br><p><code>hexo clean</code> #清除缓存 网页正常情况下可以忽略此条命令<br><code>hexo g</code> #生成静态网页<br><code>hexo d</code> #开始部署</p><br><h3 id="articleHeader3"><a name="t3"></a>监视文件变动</h3><br><p><code>hexo generate</code> #使用 Hexo 生成静态文件快速而且简单<br><code>hexo generate –watch</code> #监视文件变动</p><br><h3 id="articleHeader4"><a name="t4"></a>完成后部署</h3><br><blockquote><br><p>两个命令的作用是相同的<br><code>hexo generate –deploy</code><br><code>hexo deploy –generate</code></p><br></blockquote><br><p><code>hexo deploy -g</code><br><code>hexo server -g</code></p><br><h2 id="articleHeader5"><a name="t5"></a>草稿</h2><br><p><code>hexo publish [layout] &lt;title&gt;</code></p><br><h2 id="articleHeader6"><a name="t6"></a>模版</h2><br><p><code>hexo new “postName”</code> #新建文章<br><code>hexo new page “pageName”</code> #新建页面<br><code>hexo generate</code> #生成静态页面至public目录<br><code>hexo server</code> #开启预览访问端口（默认端口4000，’ctrl + c’关闭server）<br><code>hexo deploy</code> #将.deploy目录部署到GitHub</p><br><p><code>hexo new [layout] &lt;title&gt;</code><br><code>hexo new photo “My Gallery”</code><br><code>hexo new “Hello World” –lang tw</code></p><br><table><thead><tr><th>变量</th><br><th>描述</th><br></tr></thead><tbody><tr><td>layout</td><br><td>布局</td><br></tr><tr><td>title</td><br><td>标题</td><br></tr><tr><td>date</td><br><td>文件建立日期</td><br></tr></tbody></table><pre class="hljs http" name="code" onclick="hljs.copyCode(event)"><code class="hljs css"><ol class="hljs-ln"><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="1"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-attribute"><span class="hljs-selector-tag">title</span></span>: <span class="hljs-string">使用<span class="hljs-selector-tag">Hexo</span>搭建个人博客</span></div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="2"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-attribute"><span class="hljs-selector-tag">layout</span></span>: <span class="hljs-string"><span class="hljs-selector-tag">post</span></span></div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="3"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-attribute"><span class="hljs-selector-tag">date</span></span>: <span class="hljs-string">2014<span class="hljs-selector-tag">-03-03</span> 19<span class="hljs-selector-pseudo">:07</span><span class="hljs-selector-pseudo">:43</span></span></div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="4"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-attribute"><span class="hljs-selector-tag">comments</span></span>: <span class="hljs-string"><span class="hljs-selector-tag">true</span></span></div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="5"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-attribute"><span class="hljs-selector-tag">categories</span></span>: <span class="hljs-string"><span class="hljs-selector-tag">Blog</span></span></div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="6"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-attribute"><span class="hljs-selector-tag">tags</span></span>: <span class="hljs-string"><span class="hljs-selector-attr">[Hexo]</span></span></div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="7"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-attribute"><span class="hljs-selector-tag">keywords</span></span>: <span class="hljs-string"><span class="hljs-selector-tag">Hexo</span>, <span class="hljs-selector-tag">Blog</span></span></div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="8"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-attribute"><span class="hljs-selector-tag">description</span></span>: <span class="hljs-string">生命在于折腾，又把博客折腾到<span class="hljs-selector-tag">Hexo</span>了。给<span class="hljs-selector-tag">Hexo</span>点赞。</span></div></div></li></ol></code><div class="hljs-button" data-title="复制"></div></pre><br><h2 id="articleHeader7"><a name="t7"></a>模版（Scaffold）</h2><br><p><code>hexo new photo “My Gallery”</code></p><br><table><thead><tr><th>变量</th><br><th>描述</th><br></tr></thead><tbody><tr><td>layout</td><br><td>布局</td><br></tr><tr><td>title</td><br><td>标题</td><br></tr><tr><td>date</td><br><td>文件建立日期</td><br></tr></tbody></table><h2 id="articleHeader8"><a name="t8"></a>设置文章摘要</h2><br><pre class="hljs xml" name="code" onclick="hljs.copyCode(event)"><code class="hljs">以上是文章摘要 <span class="hljs-comment"><span class="hljs-comment">&lt;!–more–&gt;</span></span> 以下是余下全文<br></code><div class="hljs-button" data-title="复制"></div></pre><br><h2 id="articleHeader9"><a name="t9"></a>写作</h2><br><p><code>hexo new page &lt;title&gt;</code><br><code>hexo new post &lt;title&gt;</code></p><br><table><thead><tr><th>变量</th><br><th>描述</th><br></tr></thead><tbody><tr><td>:title</td><br><td>标题</td><br></tr><tr><td>:year</td><br><td>建立的年份（4 位数）</td><br></tr><tr><td>:month</td><br><td>建立的月份（2 位数）</td><br></tr><tr><td>:i_month</td><br><td>建立的月份（去掉开头的零）</td><br></tr><tr><td>:day</td><br><td>建立的日期（2 位数）</td><br></tr><tr><td>:i_day</td><br><td>建立的日期（去掉开头的零）</td><br></tr></tbody></table><h3 id="articleHeader10"><a name="t10"></a>推送到服务器上</h3><br><p><code>hexo n</code> #写文章<br><code>hexo g</code> #生成<br><code>hexo d</code> #部署 #可与<code>hexo g</code>合并为 <code>hexo d -g</code></p><br><h2 id="articleHeader11"><a name="t11"></a>报错</h2><br><h3 id="articleHeader12"><a name="t12"></a>1.找不到git部署</h3><br><pre class="hljs coffeescript" name="code" onclick="hljs.copyCode(event)"><code class="hljs vbscript"><span class="hljs-keyword">ERROR</span> Deployer <span class="hljs-keyword"><span class="hljs-keyword">not</span></span> <span class="hljs-attribute">found</span>: git<br></code><div class="hljs-button" data-title="复制"></div></pre><br><p><strong>解决方法</strong></p><br><p><code>npm install hexo-deployer-git –save</code></p><br><h3 id="articleHeader13"><a name="t13"></a>3.部署类型设置git</h3><br><p>hexo 3.0 部署类型不再是<code>github</code>，<code>_config.yml</code> 中修改</p><br><pre onclick="hljs.copyCode(event)"><code class="bash hljs"><ol class="hljs-ln"><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="1"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-comment"><span class="hljs-comment"># Deployment</span></span></div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="2"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-comment"><span class="hljs-comment">## Docs: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="noopener">http://hexo.io/docs/deployment.html</a></span></span></div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="3"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">deploy:</div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="4"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">  <span class="hljs-built_in"><span class="hljs-built_in">type</span></span>: git</div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="5"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">  repository: git@<strong><em>.github.com:</em></strong>/***.github.io.git</div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="6"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">  branch: master</div></div></li></ol></code><div class="hljs-button" data-title="复制"></div></pre><br><h3 id="articleHeader14"><a name="t14"></a>4. xcodebuild</h3><br><p>xcode-select: error: tool ‘xcodebuild’ requires Xcode, but active developer directory ‘/Library/Developer/CommandLineTools’ is a command line tools instance</p><br><p><code>npm install bcrypt</code></p><br><h3 id="articleHeader15"><a name="t15"></a>5. RSS不显示</h3><br><h4>安装RSS插件</h4><br><p><code>npm install hexo-generator-feed –save</code></p><br><h4>开启RSS功能</h4><br><p>编辑hexo/_config.yml，添加如下代码：</p><br><pre class="hljs http" name="code" onclick="hljs.copyCode(event)"><code class="hljs python"><span class="hljs-attribute">rss</span>: <span class="hljs-string">/atom.xml <span class="hljs-comment">#rss地址  默认即可</span></span><br></code><div class="hljs-button" data-title="复制"></div></pre><br><h4>开启评论</h4><br><p>1.我使用多说代替自带的评论，在<a href="http://duoshuo.com" rel="nofollow" target="_blank">多说</a> 网站注册 &gt; 后台管理 &gt; 添加新站点 &gt; 工具 === 复制通用代码 里面有 short_name</p><br><ol><li><br><p>在根目录 <code>_config.yml</code> 添加一行 <code>disqus_shortname: jslite</code> 是在多说注册时产生的</p><br></li><li><br><p>复制到 <code>themes\landscape\layout_partial\article.ejs</code><br><br>把</p><br></li></ol><pre class="hljs xml" name="code" onclick="hljs.copyCode(event)"><code class="hljs"><ol class="hljs-ln" style="width:1059px"><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="1"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-tag"><span class="hljs-tag">&lt;</span><span class="hljs-title"><span class="hljs-tag"><span class="hljs-name">%</span></span></span><span class="hljs-tag"> </span><span class="hljs-attribute"><span class="hljs-tag"><span class="hljs-attr">if</span></span></span><span class="hljs-tag"> (!</span><span class="hljs-attribute"><span class="hljs-tag"><span class="hljs-attr">index</span></span></span><span class="hljs-tag"> &amp;&amp; </span><span class="hljs-attribute"><span class="hljs-tag"><span class="hljs-attr">post.comments</span></span></span><span class="hljs-tag"> &amp;&amp; </span><span class="hljs-attribute"><span class="hljs-tag"><span class="hljs-attr">config.disqus_shortname</span></span></span><span class="hljs-tag">){ %&gt;</span></span></div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="2"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-tag"><span class="hljs-tag">&lt;</span><span class="hljs-title"><span class="hljs-tag"><span class="hljs-name">section</span></span></span><span class="hljs-tag"> </span><span class="hljs-attribute"><span class="hljs-tag"><span class="hljs-attr">id</span></span></span><span class="hljs-tag">=</span><span class="hljs-value"><span class="hljs-tag"><span class="hljs-string">“comments”</span></span></span><span class="hljs-tag">&gt;</span></span></div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="3"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-tag"><span class="hljs-tag">&lt;</span><span class="hljs-title"><span class="hljs-tag"><span class="hljs-name">div</span></span></span><span class="hljs-tag"> </span><span class="hljs-attribute"><span class="hljs-tag"><span class="hljs-attr">id</span></span></span><span class="hljs-tag">=</span><span class="hljs-value"><span class="hljs-tag"><span class="hljs-string">“disqus_thread”</span></span></span><span class="hljs-tag">&gt;</span></span></div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="4"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">  <span class="hljs-tag"><span class="hljs-tag">&lt;</span><span class="hljs-title"><span class="hljs-tag"><span class="hljs-name">noscript</span></span></span><span class="hljs-tag">&gt;</span></span>Please enable JavaScript to view the <span class="hljs-tag"><span class="hljs-tag">&lt;</span><span class="hljs-title"><span class="hljs-tag"><span class="hljs-name">a</span></span></span><span class="hljs-tag"> </span><span class="hljs-attribute"><span class="hljs-tag"><span class="hljs-attr">href</span></span></span><span class="hljs-tag">=</span><span class="hljs-value"><span class="hljs-tag"><span class="hljs-string">“//disqus.com/?ref_noscript”</span></span></span><span class="hljs-tag">&gt;</span></span>comments powered by Disqus.<span class="hljs-tag"><span class="hljs-tag">&lt;/</span><span class="hljs-title"><span class="hljs-tag"><span class="hljs-name">a</span></span></span><span class="hljs-tag">&gt;</span></span><span class="hljs-tag"><span class="hljs-tag">&lt;/</span><span class="hljs-title"><span class="hljs-tag"><span class="hljs-name">noscript</span></span></span><span class="hljs-tag">&gt;</span></span></div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="5"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-tag"><span class="hljs-tag">&lt;/</span><span class="hljs-title"><span class="hljs-tag"><span class="hljs-name">div</span></span></span><span class="hljs-tag">&gt;</span></span></div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="6"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-tag"><span class="hljs-tag">&lt;/</span><span class="hljs-title"><span class="hljs-tag"><span class="hljs-name">section</span></span></span><span class="hljs-tag">&gt;</span></span></div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="7"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-tag"><span class="hljs-tag">&lt;</span><span class="hljs-title"><span class="hljs-tag"><span class="hljs-name">%</span></span></span><span class="hljs-tag"> } %&gt;</span></span></div></div></li></ol></code><div class="hljs-button" data-title="复制"></div></pre><br><p>改为</p><br><div class="widget-codetool" style="display:block;"><br><div class="widget-codetool--inner"><span class="selectCode code-tool" title=""></span><span class="copyCode code-tool" title=""></span><span class="saveToNote code-tool" title=""></span></div><br></div><br><pre onclick="hljs.copyCode(event)"><code class="html hljs xml"><ol class="hljs-ln" style="width:1236px"><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="1"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-tag"><span class="hljs-tag">&lt;</span><span class="hljs-title"><span class="hljs-tag"><span class="hljs-name">%</span></span></span><span class="hljs-tag"> </span><span class="hljs-attribute"><span class="hljs-tag"><span class="hljs-attr">if</span></span></span><span class="hljs-tag"> (!</span><span class="hljs-attribute"><span class="hljs-tag"><span class="hljs-attr">index</span></span></span><span class="hljs-tag"> &amp;&amp; </span><span class="hljs-attribute"><span class="hljs-tag"><span class="hljs-attr">post.comments</span></span></span><span class="hljs-tag"> &amp;&amp; </span><span class="hljs-attribute"><span class="hljs-tag"><span class="hljs-attr">config.disqus_shortname</span></span></span><span class="hljs-tag">){ %&gt;</span></span></div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="2"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">  <span class="hljs-tag"><span class="hljs-tag">&lt;</span><span class="hljs-title"><span class="hljs-tag"><span class="hljs-name">section</span></span></span><span class="hljs-tag"> </span><span class="hljs-attribute"><span class="hljs-tag"><span class="hljs-attr">id</span></span></span><span class="hljs-tag">=</span><span class="hljs-value"><span class="hljs-tag"><span class="hljs-string">“comments”</span></span></span><span class="hljs-tag">&gt;</span></span></div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="3"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">    <span class="hljs-comment"><span class="hljs-comment">&lt;!– 多说评论框 start –&gt;</span></span></div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="4"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">    <span class="hljs-tag"><span class="hljs-tag">&lt;</span><span class="hljs-title"><span class="hljs-tag"><span class="hljs-name">div</span></span></span><span class="hljs-tag"> </span><span class="hljs-attribute"><span class="hljs-tag"><span class="hljs-attr">class</span></span></span><span class="hljs-tag">=</span><span class="hljs-value"><span class="hljs-tag"><span class="hljs-string">“ds-thread”</span></span></span><span class="hljs-tag"> </span><span class="hljs-attribute"><span class="hljs-tag"><span class="hljs-attr">data-thread-key</span></span></span><span class="hljs-tag">=</span><span class="hljs-value"><span class="hljs-tag"><span class="hljs-string">“&lt;%= post.layout %&gt;-&lt;%= post.slug %&gt;”</span></span></span><span class="hljs-tag"> </span><span class="hljs-attribute"><span class="hljs-tag"><span class="hljs-attr">data-title</span></span></span><span class="hljs-tag">=</span><span class="hljs-value"><span class="hljs-tag"><span class="hljs-string">“&lt;%= post.title %&gt;”</span></span></span><span class="hljs-tag"> </span><span class="hljs-attribute"><span class="hljs-tag"><span class="hljs-attr">data-url</span></span></span><span class="hljs-tag">=</span><span class="hljs-value"><span class="hljs-tag"><span class="hljs-string">“&lt;%= page.permalink %&gt;”</span></span></span><span class="hljs-tag">&gt;</span></span><span class="hljs-tag"><span class="hljs-tag">&lt;/</span><span class="hljs-title"><span class="hljs-tag"><span class="hljs-name">div</span></span></span><span class="hljs-tag">&gt;</span></span></div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="5"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">    <span class="hljs-comment"><span class="hljs-comment">&lt;!– 多说评论框 end –&gt;</span></span></div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="6"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">    <span class="hljs-comment"><span class="hljs-comment">&lt;!– 多说公共JS代码 start (一个网页只需插入一次) –&gt;</span></span></div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="7"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">    <span class="hljs-tag"><span class="hljs-tag">&lt;</span><span class="hljs-title"><span class="hljs-tag"><span class="hljs-name">script</span></span></span><span class="hljs-tag"> </span><span class="hljs-attribute"><span class="hljs-tag"><span class="hljs-attr">type</span></span></span><span class="hljs-tag">=</span><span class="hljs-value"><span class="hljs-tag"><span class="hljs-string">“text/javascript”</span></span></span><span class="hljs-tag">&gt;</span></span><span class="javascript"><span class="javascript"></span></span></div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="8"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">    <span class="hljs-keyword"><span class="javascript"><span class="hljs-keyword">var</span></span></span><span class="javascript"> duoshuoQuery = {<span class="hljs-attr">short_name</span>:</span><span class="hljs-string"><span class="javascript"><span class="hljs-string">‘&lt;%= config.disqus_shortname %&gt;’</span></span></span><span class="javascript">};</span></div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="9"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">      (<span class="hljs-function"><span class="hljs-keyword"><span class="javascript"><span class="hljs-function"><span class="hljs-keyword">function</span></span></span></span><span class="hljs-params"><span class="javascript"><span class="hljs-function">(<span class="hljs-params"></span>)</span></span></span><span class="javascript"><span class="hljs-function"> </span></span></span><span class="javascript">{</span></div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="10"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">        <span class="hljs-keyword"><span class="javascript"><span class="hljs-keyword">var</span></span></span><span class="javascript"> ds = </span><span class="hljs-built_in"><span class="javascript"><span class="hljs-built_in">document</span></span></span><span class="javascript">.createElement(</span><span class="hljs-string"><span class="javascript"><span class="hljs-string">‘script’</span></span></span><span class="javascript">);</span></div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="11"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">        ds.type = <span class="hljs-string"><span class="javascript"><span class="hljs-string">‘text/javascript’</span></span></span><span class="javascript">;ds.async = </span><span class="hljs-literal"><span class="javascript"><span class="hljs-literal">true</span></span></span><span class="javascript">;</span></div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="12"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">        ds.src = (<span class="hljs-built_in"><span class="javascript"><span class="hljs-built_in">document</span></span></span><span class="javascript">.location.protocol == </span><span class="hljs-string"><span class="javascript"><span class="hljs-string">‘https:’</span></span></span><span class="javascript"> ? </span><span class="hljs-string"><span class="javascript"><span class="hljs-string">‘https:’</span></span></span><span class="javascript"> : </span><span class="hljs-string"><span class="javascript"><span class="hljs-string">‘http:’</span></span></span><span class="javascript">) + </span><span class="hljs-string"><span class="javascript"><span class="hljs-string">‘//static.duoshuo.com/embed.js’</span></span></span><span class="javascript">;</span></div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="13"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">        ds.charset = <span class="hljs-string"><span class="javascript"><span class="hljs-string">‘UTF-8’</span></span></span><span class="javascript">;</span></div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="14"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">        (<span class="hljs-built_in"><span class="javascript"><span class="hljs-built_in">document</span></span></span><span class="javascript">.getElementsByTagName(</span><span class="hljs-string"><span class="javascript"><span class="hljs-string">‘head’</span></span></span><span class="javascript">)[</span><span class="hljs-number"><span class="javascript"><span class="hljs-number">0</span></span></span><span class="javascript">] </span></div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="15"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">         || <span class="hljs-built_in"><span class="javascript"><span class="hljs-built_in">document</span></span></span><span class="javascript">.getElementsByTagName(</span><span class="hljs-string"><span class="javascript"><span class="hljs-string">‘body’</span></span></span><span class="javascript">)[</span><span class="hljs-number"><span class="javascript"><span class="hljs-number">0</span></span></span><span class="javascript">]).appendChild(ds);</span></div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="16"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">      })();</div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="17"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">      <span class="hljs-tag"><span class="hljs-tag">&lt;/</span><span class="hljs-title"><span class="hljs-tag"><span class="hljs-name">script</span></span></span><span class="hljs-tag">&gt;</span></span></div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="18"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">    <span class="hljs-comment"><span class="hljs-comment">&lt;!– 多说公共JS代码 end –&gt;</span></span></div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="19"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line">  <span class="hljs-tag"><span class="hljs-tag">&lt;/</span><span class="hljs-title"><span class="hljs-tag"><span class="hljs-name">section</span></span></span><span class="hljs-tag">&gt;</span></span></div></div></li><li><div class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="20"></div></div><div class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-tag"><span class="hljs-tag">&lt;</span><span class="hljs-title"><span class="hljs-tag"><span class="hljs-name">%</span></span></span><span class="hljs-tag"> } %&gt;</span></span></div></div></li></ol></code><div class="hljs-button" data-title="复制"></div></pre><br></div><br><p><br></p><br><p><br></p><br><p>原文出处：<a href="https://segmentfault.com/a/1190000002632530" target="_blank" rel="noopener">https://segmentfault.com/a/1190000002632530</a><br></p><br>            </div>
+                <hr>
+                
+
+                <ul class="pager">
+                    
+                    
+                    <li class="next">
+                        <a href="/2018/11/17/06/" data-toggle="tooltip" data-placement="top"
+                           title="谷歌云免费搭建一年SS翻墙并有终身免费服务哦！">Next Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+
+                
+
+                
+
+
+                <!--加入新的评论系统-->
+                
+
+                
+
+            </div>
+
+            <div class="hidden-xs col-sm-3 toc-col">
+                <div class="toc-wrap">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader0"><span class="toc-text">hexo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader1"><span class="toc-text">简写</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader2"><span class="toc-text">服务器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#articleHeader3"><span class="toc-text">监视文件变动</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#articleHeader4"><span class="toc-text">完成后部署</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader5"><span class="toc-text">草稿</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader6"><span class="toc-text">模版</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader7"><span class="toc-text">模版（Scaffold）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader8"><span class="toc-text">设置文章摘要</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader9"><span class="toc-text">写作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#articleHeader10"><span class="toc-text">推送到服务器上</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#articleHeader11"><span class="toc-text">报错</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#articleHeader12"><span class="toc-text">1.找不到git部署</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#articleHeader13"><span class="toc-text">3.部署类型设置git</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#articleHeader14"><span class="toc-text">4. xcodebuild</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#articleHeader15"><span class="toc-text">5. RSS不显示</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-text">安装RSS插件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-text">开启RSS功能</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-text">开启评论</span></a></li></ol></li></ol></li></ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Sidebar Container -->
+
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5 class="text-center">
+                        <a href="/tags/">FEATURED TAGS</a>
+                    </h5>
+                    <div class="tags">
+                        
+                        <a class="tag" href="/tags/#教程"
+                           title="教程">教程</a>
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+            </div>
+        </div>
+
+    </div>
+</article>
+
+
+
+
+
+
+
+<!-- Footer -->
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
+                <br>
+                <ul class="list-inline text-center">
+                
+                
+                    <li>
+                        <a target="_blank" href="https://twitter.com/JiBenQing">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+                
+                    <li>
+                        <a target="_blank" href="https://www.zhihu.com/people/ji-ben-qing-32">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa  fa-stack-1x fa-inverse">知</i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank" href="http://weibo.com/xiaoyaoz1">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank" href="https://www.facebook.com/benqing.ji">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank"  href="https://github.com/xiaoyaoz1">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank"  href="https://www.linkedin.com/in/本庆-纪-5a7222110">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; 随笔记 2018
+                    <br>
+                    <span id="busuanzi_container_site_pv" style="font-size: 12px;">PV: <span id="busuanzi_value_site_pv"></span> Times</span>
+                    <br>
+                    Theme by <a href="https://haojen.github.io/">Haojen Ma</a>
+                </p>
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/blog.js"></script>
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("http://haojen.github.io/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+<!-- Google Analytics -->
+
+
+
+<!-- Baidu Tongji -->
+
+
+<!-- swiftype -->
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install','','2.0.0');
+</script>
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<!--wechat title img-->
+<img class="wechat-title-img" src="http://pgqjaox31.bkt.clouddn.com/00.jpg">
+</body>
+
+</html>
